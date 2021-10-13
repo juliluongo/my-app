@@ -1,4 +1,4 @@
-
+import Navbar from "./components/Navbar";
 
 
 function App() {
@@ -17,8 +17,10 @@ function App() {
           Aprende React
         </a>
       </header>
+      <Navbar />
     </div>
   );
 }
+
 
 export default App;
