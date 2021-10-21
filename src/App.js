@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
-
+import Saludo from "./components/ItemListContainer"
+import imagenes from "./components/imagenes"
 
 function App() {
   return (
@@ -18,6 +19,13 @@ function App() {
         </a>
       </header>
       <Navbar />
+      <div>
+        <img src={imagenes.img1} />
+
+      </div>
+      <Saludo persona="humano" />
+
+
     </div>
   );
 }

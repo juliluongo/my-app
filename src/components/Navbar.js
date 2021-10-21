@@ -15,6 +15,7 @@ const NavBar = () => {
                     <Nav.Link href="#home">Inicio</Nav.Link>
                     <Nav.Link href="#features">Productos</Nav.Link>
                     <Nav.Link href="#pricing">¿Quiénes somos?</Nav.Link>
+
                 </Nav>
             </Container>
         </Navbar>
