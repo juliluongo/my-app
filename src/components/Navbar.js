@@ -5,6 +5,7 @@
 // EXPORT - Exportar el componente para poder utilizarlo en otras partes del código
 
 import { Navbar, Container, Nav } from 'react-bootstrap';
+import imagenes from "./imagenes"
 
 const NavBar = () => {
     return (
@@ -15,7 +16,7 @@ const NavBar = () => {
                     <Nav.Link href="#home">Inicio</Nav.Link>
                     <Nav.Link href="#features">Productos</Nav.Link>
                     <Nav.Link href="#pricing">¿Quiénes somos?</Nav.Link>
-
+                    <img src={imagenes.img1} alt="imagen" class="img-fluid" width="5%" />
                 </Nav>
             </Container>
         </Navbar>
