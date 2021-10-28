@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import Saludo from "./components/ItemListContainer";
+import ItemListContainer from "./components/ItemListContainer";
 
 
 
@@ -15,7 +15,7 @@ function App() {
       </header>
       <Navbar />
 
-      <Saludo persona="humano" />
+      <ItemListContainer />
 
 
 
