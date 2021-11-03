@@ -1,13 +1,25 @@
-const Item = () => {
+import { Card, Button } from 'react-bootstrap';
+
+const Item = ({ prod }) => {
 
     return (
 
-        <h3>Soy el Item</h3>
-        // Este componente va a renderizar los datos que le lleguen por PROPS
-        // Renderizo el ID
-        // Renderizo el username
-        // Renderizo el mail
-        // Renderizo la ciudad
+        <>
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={prod.pictureUrl} />
+                <Card.Body>
+                    <Card.Title>{prod.title}</Card.Title>
+                    <Card.Title> ${prod.price}</Card.Title>
+                    <Card.Text>
+                        {prod.description}
+                    </Card.Text>
+                    <Button variant="primary">Más detalles</Button>
+                </Card.Body>
+            </Card>
+
+
+        </>
+
     )
 
 }

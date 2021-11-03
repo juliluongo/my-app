@@ -1,23 +1,16 @@
 import Item from "./Item"
 
 
-const ItemList = (props) => {
-
-    //acá mapeamos la info
-    // El map me genera los items enviandole las props
-
+const ItemList = ({ product }) => {
+    console.log(product)
     return (
-        <div>
-
-            <h3>Soy el ItemList</h3>
-
-            <Item />
-
-
-        </div>
-        // Llamamos a Item y le pasamos las props
-        // <Item id={id} username={username} city={city} email={email}
+        <>
+            {
+                product.map(prod => <Item key={prod.id} prod={prod} />)
+            }
+        </>
     )
+
 }
 
 export default ItemList
