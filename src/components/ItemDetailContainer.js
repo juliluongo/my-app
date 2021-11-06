@@ -16,7 +16,6 @@ const getItem = new Promise((resolve, reject) => { // Creamos nuestra nueva prom
     }, 2000)
 })
 
-
 const ItemDetailContainer = () => {
 
     const [produ, setProdu] = useState([]); // Le damos un estado a nuestra variable "Product"

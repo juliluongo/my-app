@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './ItemCount.css';
 
 const ItemCount = ({ initial, stock, text }) => {
     // Tengo un número máximo (STOCK) - Valor indicador para saber hasta cuando sumar
@@ -34,11 +35,13 @@ const ItemCount = ({ initial, stock, text }) => {
 
         <div>
             <div>
-                <button onClick={onDecrease} > - </button>
-                <div>{qty}</div>
-                <button onClick={onIncrease} > + </button>
+                <button class="btn btn-outline-dark btn-sm"  onClick={onDecrease} > - </button>
+                { qty }
+                <button class="btn btn-outline-dark btn-sm"  onClick={onIncrease} > + </button>
+           
+           
+            <button class="btn btn-outline-dark btn-sm" onClick={onAdd} > Agregar al carro </button>
             </div>
-            <button onClick={onAdd} > Agregar al carro </button>
         </div>
     )
 }

@@ -2,7 +2,7 @@ import Item from "./Item"
 
 
 const ItemList = ({ product }) => {
-    console.log(product)
+    
     return (
         <>
             {
