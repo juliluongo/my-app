@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import './ItemCount.css';
 
 const ItemCount = ({ initial, stock, text }) => {
     // Tengo un número máximo (STOCK) - Valor indicador para saber hasta cuando sumar
     // Tengo un número mínimo (1) - valor indicador para saber hasta cuando restar
-
-
     const [qty, setQty] = useState(initial)
+    const [cambiarBoton, setCambiarBoton] = useState(false)
+
 
     const onIncrease = () => {
         const newValue = qty + 1
@@ -26,6 +27,8 @@ const ItemCount = ({ initial, stock, text }) => {
 
     const onAdd = () => {
         const message = `Agregaste ${qty} producto`
+        setQty(initial)
+        setCambiarBoton(true)
         if (stock !== 0) {
             (qty === 1) ? alert(message) : alert(message + 's')
         }
@@ -39,8 +42,15 @@ const ItemCount = ({ initial, stock, text }) => {
                 { qty }
                 <button class="btn btn-outline-dark btn-sm"  onClick={onIncrease} > + </button>
            
+
+{cambiarBoton 
+
+? <Link to='/carrito'><button class="btn btn-outline-dark btn-sm"> Terminar compra </button></Link>
+
+: <button class="btn btn-outline-dark btn-sm" onClick={onAdd} > Agregar al carro </button>}
+
            
-            <button class="btn btn-outline-dark btn-sm" onClick={onAdd} > Agregar al carro </button>
+            
             </div>
         </div>
     )

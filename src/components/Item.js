@@ -1,6 +1,5 @@
 import { Card, Button } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-import ItemCount from "./ItemCount";
 import './Item.css';
 
 const Item = ({ prod }) => {
@@ -20,7 +19,7 @@ const Item = ({ prod }) => {
                    <Link to={`/category/item/${prod.id}`}> <Button variant="primary">Más detalles</Button></Link>
                    </Card.Body>
                    <Card.Body class="info-wrap">
-                <ItemCount initial={1} stock={10} text="Soy el texto de la prop" />
+                   
                 </Card.Body>
                 
             </Card>
