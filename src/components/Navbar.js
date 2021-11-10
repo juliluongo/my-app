@@ -9,19 +9,23 @@ import {Link} from 'react-router-dom';
 
 const NavBar = () => {
     return (
-        <Navbar bg="dark" variant="dark">
-            <Container>
-                <Navbar.Brand href=""><Link to="/">FORTALEZA TIENDA</Link></Navbar.Brand>
+        <>
+                <Navbar bg="dark" variant="dark">
+        <Container>
+                <h2><Navbar.Brand href=""><Link class="link-light" to="/">FORTALEZA TIENDA</Link></Navbar.Brand></h2>
                 <Nav className="me-auto">
-                    <Nav.Link><Link to="/">Inicio </Link></Nav.Link> 
-                    <Nav.Link><Link to="/quienessomos">¿Quiénes somos?</Link></Nav.Link>
-                    <Nav.Link><Link to="/category/zapatillas">Zapatillas</Link></Nav.Link>
-                    <Nav.Link><Link to="/category/remeras">Remeras</Link></Nav.Link>
-                    <Nav.Link><Link to="/carrito"> Carrito</Link></Nav.Link>
+                
+                    <Nav.Link><Link class="nav-link active link-light" to="/">Inicio </Link></Nav.Link> 
+                    <Nav.Link><Link class="nav-link active link-light" to="/quienessomos">¿Quiénes somos?</Link></Nav.Link>
+                    <Nav.Link><Link class="nav-link active link-light" to="/category/zapatillas">Zapatillas</Link></Nav.Link>
+                    <Nav.Link><Link class="nav-link active link-light" to="/category/remeras">Remeras</Link></Nav.Link>
+                    <Nav.Link><Link class="nav-link disabled" to="/category/gorras">Gorras</Link></Nav.Link>
+                    <Nav.Link><Link class="nav-link active link-light" to="/carrito"> Carrito</Link></Nav.Link>
+                    
                 </Nav>
             </Container>
         </Navbar>
-    )
+   </> )
 }
 
 

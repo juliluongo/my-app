@@ -4,6 +4,8 @@ import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import QuienesSomos from "./components/QuienesSomos";
 import Cart from "./components/Cart";
+import './components/App.css';
+
 
 
 
@@ -13,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      
   
   <Router> 
   <Navbar />

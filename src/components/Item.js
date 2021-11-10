@@ -16,7 +16,7 @@ const Item = ({ prod }) => {
                     <Card.Text>
                         {prod.description}
                     </Card.Text>
-                   <Link to={`/category/item/${prod.id}`}> <Button variant="primary">Más detalles</Button></Link>
+                   <Link to={`/category/item/${prod.id}`}> <button class="btn btn-outline-info">Más detalles</button></Link>
                    </Card.Body>
                    <Card.Body class="info-wrap">
                    
