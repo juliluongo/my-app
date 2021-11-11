@@ -5,6 +5,8 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import QuienesSomos from "./components/QuienesSomos";
 import Cart from "./components/Cart";
 import './components/App.css';
+import CartContextProvider from "./context/CartContext";
+
 
 
 
@@ -16,7 +18,7 @@ function App() {
   return (
     <div className="App">
       
-  
+      <CartContextProvider>
   <Router> 
   <Navbar />
     <Switch>
@@ -44,8 +46,7 @@ function App() {
 
     </Switch>
  </Router>
-
-
+ </CartContextProvider>
 
     </div>
 

@@ -1,6 +1,5 @@
-import React, { Fragment, useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { useParams } from "react-router";
-import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
 import './ItemListContainer.css';
 
@@ -10,9 +9,9 @@ const productos = [
     { id: 2, title: 'Airmax 90', category:"zapatillas", description: "Zapatilla negra", price: 10000, pictureUrl: 'https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dweafdb880/products/NI_AQ2568-003/NI_AQ2568-003-1.JPG' },
     { id: 3, title: 'Puma RSX', category:"zapatillas", description: "Zapatilla multicolor", price: 15000, pictureUrl: 'https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw39ff2754/products/PU_372117-02/PU_372117-02-1.JPG' },
     { id: 4, title: 'Converse All-Star', category:"zapatillas", description: "Zapatilla negras con blanco", price: 8000, pictureUrl: 'https://www.moovbydexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw7aee245b/products/CO_169955C/CO_169955C-1.JPG' },
-    { id: 5, title: 'Remera Nike', category:"remeras", description: "Remera de algodón Nike", price: 3000, pictureUrl: 'https://www.stockcenter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw0cd54800/products/NI_BV5631-010/NI_BV5631-010-1.JPG' },
-    { id: 6, title: 'Remera Adidas', category:"remeras", description: "Remera de algodón Adidas", price: 3100, pictureUrl: 'https://www.stockcenter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwffb516db/products/AD_GV5237/AD_GV5237-1.JPG' },
-    { id: 7, title: 'Remera Puma', category:"remeras", description: "Remera de algodón Puma", price: 2800, pictureUrl: 'https://www.stockcenter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw71303718/products/PU_845895-01/PU_845895-01-1.JPG' },
+    { id: 5, title: 'Remera Nike', category:"remeras", description: "La Remera Nike Sportswear Icon está confeccionada con tela tejida suave y cómoda apta para que lleves un look casual todos los días. El pequeño estampado dibujado a mano aporta originalidad y un estilo urbano a una prenda clásica de la marca", price: 3000, pictureUrl: 'https://www.stockcenter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw0cd54800/products/NI_BV5631-010/NI_BV5631-010-1.JPG' },
+    { id: 6, title: 'Remera Adidas', category:"remeras", description: "Llevar un estilo casual y chic no es nada difícil, ponele onda a tus outfits con la Remera adidas Adicolor Trefoil su material la hace suave al tacto, su logo estampado del trifolio representa la historia deportiva que te da un look clasico característico de la marca; la podés combinar fácilmente con tus joggers o jeans favoritos para que proyectes esa imagen canchera que siempre llevás.", price: 3100, pictureUrl: 'https://www.stockcenter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwffb516db/products/AD_GV5237/AD_GV5237-1.JPG' },
+    { id: 7, title: 'Remera Puma', category:"remeras", description: "Esta remera Puma es una prenda sencilla que te mantiene cómoda gracias a su tejido suave y liviano de algodón.", price: 2800, pictureUrl: 'https://www.stockcenter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw71303718/products/PU_845895-01/PU_845895-01-1.JPG' },
 
 ];
 

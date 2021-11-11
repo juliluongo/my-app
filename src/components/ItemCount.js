@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../context/CartContext";
 import './ItemCount.css';
 
-const ItemCount = ({ initial, stock, text }) => {
+const ItemCount = ({ initial, stock, produ }) => {
     // Tengo un número máximo (STOCK) - Valor indicador para saber hasta cuando sumar
     // Tengo un número mínimo (1) - valor indicador para saber hasta cuando restar
     const [qty, setQty] = useState(initial)
     const [cambiarBoton, setCambiarBoton] = useState(false)
-
+    const { añadirAlCarrito} = useCartContext();
 
     const onIncrease = () => {
         const newValue = qty + 1
@@ -26,6 +27,7 @@ const ItemCount = ({ initial, stock, text }) => {
     }
 
     const onAdd = () => {
+        añadirAlCarrito({produ, cantidad:` ${qty}`})
         const message = `Agregaste ${qty} producto`
         setQty(initial)
         setCambiarBoton(true)
@@ -43,11 +45,7 @@ const ItemCount = ({ initial, stock, text }) => {
                 <button class="btn btn-outline-info btn-sm"  onClick={onIncrease} > + </button>
            
 
-{cambiarBoton 
-
-? <Link to='/carrito'><button class="btn btn-outline-info btn-sm"> Terminar compra </button></Link>
-
-: <button class="btn btn-outline-info btn-sm" onClick={onAdd} > Agregar al carro </button>}
+{cambiarBoton ? <Link to='/carrito'><button class="btn btn-outline-info btn-sm"> Terminar compra </button></Link> : <button class="btn btn-outline-info btn-sm" onClick={onAdd} > Agregar al carro </button>}
 
            
             
